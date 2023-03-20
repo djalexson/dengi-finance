@@ -1,0 +1,54 @@
+.footer
+	padding: 40px 0
+	border-top: 1px solid $color-devider
+.footer__nav
+	display: flex 
+	padding: 0
+	margin: 0
+	flex-wrap: wrap
+.footer__items 
+	list-style: none
+	margin-right: 0
+	&:not(:last-child)
+		margin-right:40px
+		
+.footor__link
+	text-decoration: none
+	color: inherit
+	font-size: 20px
+	font-style: italic
+	transition: all .30s ease-in
+	&:hover
+		color: darken($textcolor, 10% )  
+.footer__email
+	display: flex
+	.btn
+		margin-left: auto
+		display: block
+		text-overflow: ellipsis
+		overflow-y: hidden
+		height: 45px
+		white-space: nowrap
+.swiper-wrapper 
+	margin-bottom: 62px
+.swiper-pagination-bullet 
+	width: 15px
+	height: 15px
+	color: #000
+	opacity: 1
+	background: rgba(0, 0, 0, 0.2)
+
+.swiper-pagination-bullet-active 
+	color: #fff
+	background: #273B98
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction 
+	bottom: 0
+@media (max-width:768px) 
+	.footer__email
+		margin-top: 20px
+		justify-content: center
+		.btn
+			margin: 0
+	.footer__list
+		display: flex
+		justify-content: center

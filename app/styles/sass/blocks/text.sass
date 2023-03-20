@@ -1,0 +1,77 @@
+.heading
+	font-size: 1em
+	padding: 0
+	margin: 0 0 24px 0
+.heading__main
+	font-size: calc(var(--index)*2.1)
+	font-weight: 700
+	color: $color-head-main
+.heading__wi
+	color:#fff
+.heading__align
+	text-align: center
+			
+.paragraph
+	p
+		font-size: calc(var(--index)*1.09)
+	&--sec
+		p
+			padding: 0
+			margin: 10px 0 0 0
+			&:not(:first-child)
+				margin: 0 
+	&--blосk
+		p
+			font-size: calc(var(--index)*0.59)              
+	&--section
+		p
+			font-size: calc(var(--index)*0.64)              
+@media (max-width: 1389px)
+	.heading__main
+		font-size: calc(var(--index)*1.9) 
+	.paragraph
+		p
+			font-size: calc(var(--index)*1.09)
+		&--blосk
+			p
+				font-size: calc(var(--index)*0.59)              
+		&--section
+			p
+				font-size: calc(var(--index)*0.64)
+	.btn
+		font-size: 14px
+
+@media (max-width:999px) 
+	.paragraph
+		p
+			font-size: calc(var(--index)*1.09)
+		&--blосk
+			p
+				font-size: calc(var(--index)*1.19)              
+		&--section
+			p
+				font-size: calc(var(--index)*1.16)
+@media (max-width:768px)
+	.heading__main
+		font-size: calc(var(--index)*2.4) 
+@media (max-width:320px)
+	.heading__main
+		font-size: 24px 
+	.paragraph
+		p
+			font-size: 16px
+		&--blосk
+			p
+				font-size: 14px     
+		&--section
+			p
+				font-size: 14px
+
+	.footer__items
+		margin: 0
+		flex: 1 1 100%
+		&:not(:last-child)
+			margin: 0
+		a
+			display: block
+			text-align: center

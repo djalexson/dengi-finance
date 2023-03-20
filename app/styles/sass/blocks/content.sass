@@ -1,0 +1,333 @@
+:root
+	--index: calc(1vw + 1vh )
+	
+.container-fluid
+	padding-left: 116px
+	padding-right: 116px	
+@media (max-width: 1400px)
+.container-fluid
+	padding-left: 50px
+	padding-right: 50px	
+@media (max-width: 1000px)
+	.container-fluid
+		padding-left: var(--bs-gutter-x) !important
+		padding-right: var(--bs-gutter-x)!important
+
+.main-section
+	position: relative
+	z-index: 2
+	margin-bottom: -12vw 
+@media (max-width:999px ) 
+	.main-section
+		margin-bottom: -11vw 
+.main-section__img
+	background: right/contain no-repeat
+	height: calc(var(--index)*23.29)
+	width: calc(var(--index)*24.2)
+.main-section__right
+	display: flex
+	justify-content: flex-end  
+
+	///search
+.search-container
+	width: 80%
+	margin: 60px auto 0px auto
+
+@media (min-width:769px)  
+	.input-group
+		position: relative
+		display: flex
+		background: transparent
+		border: 1px solid #EAEFFF
+		border-radius: 40px
+	.search-input	
+		flex: 1 1 auto
+	.select-wrap
+		flex: 0 0 auto
+.search-input	
+	position: relative
+	input[type="text"]
+		border: none
+		background-color: transparent
+		font-style: normal
+		font-weight: 400
+		font-size: 18px
+		line-height: 100%
+		color: #D4DBF2
+		width: 100%
+		padding: 20px 52px 20px 20px
+		&::placeholder
+			color: #D4DBF2
+.magnifying-glass
+	fill: #819EC7
+.select-wrap
+	cursor: pointer
+	position: relative
+	padding:  0 20px 
+	border-right: 1px solid #EAEFFF
+	background: #F8FAFF
+	border-top-left-radius: 20px
+	border-bottom-left-radius: 20px
+	display: flex
+.select-container__defold
+	display: flex
+	align-items: center
+.select-container__options
+	font-style: normal
+	font-weight: 400
+	font-size: 18px
+	line-height: 100% 
+	color: #819EC7
+.down-arrow
+	margin-top: 4px 
+	fill: #819EC7
+.select-container__list
+	display: none
+	position: absolute
+	bottom: -100%
+	left: 0
+	padding: 0
+	margin: 0
+	li
+		margin: 6px
+		list-style: none 
+.input-group__btn
+	background-color: transparent
+	position: absolute
+	right: 10px
+	top: 50%
+	transform: translateY(-50%)
+	border: none
+
+
+//--------------
+
+
+
+.interested-section__head
+	margin-bottom: 10px
+.interested-section__block 
+	text-align: center
+.interested-section__link
+	text-decoration: none
+	&:hover
+		text-decoration: none
+	h5
+		font-size: calc(var(--index)*0.9)
+		font-weight: 700 
+	img
+		display: inline-block
+		width: calc(var(--index)*10)
+		height: auto
+.interested-section__icons 
+	margin-bottom: 20px
+
+
+.Investor-section__block
+	.btn
+		display: inline-block
+		margin-top: 24px
+
+
+.comments-section__col
+	display: flex
+	cursor: grab
+.decor 
+	padding: 14px 20px 
+	border: 1px solid #EAEFFF
+	box-shadow: 0px 0px 10px #EAEFFF
+.comments-section__user
+	margin-bottom: 11px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+
+.comments-section__user-title 
+	font-size: 16px
+	span
+		display: block
+.comments-section__cat,.comments-section__pod
+	margin-bottom: 5px 
+.comments-section__cat
+	font-size: 1em
+	font-weight: 700
+	color: $color-head-main 
+.comments-section__pod 
+	a
+		font-size: .81em
+		color: inherit
+		&:hover
+			color: darken($textcolor, 10% ) 
+.comments-section__user-neme
+	font-weight: 700
+	font-size: 11px
+	color: #B9B9B9
+ 
+.reting 
+	display: flex
+	margin-right: -10px
+.reting__nem
+	cursor: pointer
+	background: url(../images/dist/baks-licke.png) 0 -32px/cover no-repeat
+	width: 25.87px
+	margin-right: 10px
+	height: 26px
+	transition: all .30s ease-in-out
+	&:hover
+		background-position: 0 0
+	&.active
+		background-position: 0 0	
+		pointer-events: none
+
+.comments-section__comm 
+	color: #969696
+
+.comments-section__link 
+	font-size: 14px
+	color: #5277F7
+	transition: all .30s ease-in
+	&:hover
+		color: darken($textcolor, 10% )
+	
+
+.about-section__block.paragraph
+	p
+		text-align: center
+		color: #fff		
+.team-section 
+	position: relative
+	z-index: 2
+	padding: 19px 0 14px 0
+.team-section__title
+	margin-bottom: 40px
+	&.paragraph--section 
+		p
+			color: #969696
+			text-align: center
+.team-section__items
+	display: flex
+	height: unset
+	cursor: grab
+
+.team-section__block
+	height: 100%
+	text-align: center
+	p
+		color:#969696
+		font-size: 11px
+		text-align: center
+	span
+		display: block 
+		text-align: center
+.team-section__avatar
+	margin-bottom: 5px
+	border-radius: 50%
+	width: 180px
+	display: inline-block
+	height: auto
+	object-fit: cover 
+.team-section__name
+	margin-bottom: 5px
+	color: #333 
+	font-weight: 700
+	text-align: 18px
+.team-section__dj
+	margin-bottom: 15px
+	color: inherit
+	font-size: 14px 
+
+@media (max-width:768px)  
+	.mentions-section
+		img
+				margin-top: calc(var(--index)*3)
+	.interested-section__block
+		img
+			width: 100%
+
+	.interested-section__row
+		width: 78%
+		margin: 0 auto
+		& > .col-12
+			display: flex  
+			&:nth-child(odd)
+				.interested-section__block
+					width: 196px
+					margin-right: auto
+			&:nth-child(even)
+				.interested-section__block
+					width: 196px
+					margin-left: auto
+					
+		
+	.input-group
+		border: none
+	.select-wrap
+		height: 64px
+		border-radius: 40px
+		width: 100%
+		border: 1px solid #EAEFFF
+		margin-bottom: 40px
+	.select-container__defold
+		width: 100%
+		justify-content: space-between
+	.down-arrow
+		height: 32px
+		width: auto
+	.search-input	
+		background: #fff
+		border: 1px solid #EAEFFF
+		border-radius: 40px
+	.select-container__options
+		display: block !important
+@media (max-width:574px)  
+	.interested-section__row
+		width: unset
+		margin: 0
+		& > .col-12
+			display: flex  
+			&:nth-child(odd)
+				.interested-section__block
+					width: calc(var(--index)*15)
+					margin-right: auto
+			&:nth-child(even)
+				.interested-section__block
+					width: calc(var(--index)*15)
+					margin-left: auto
+	.interested-section__link
+		img
+			resize: both
+			width: calc(var(--index)*15)
+			height: calc(var(--index)*15) 
+
+		h5
+			font-size: calc(var(--index)*1.4)
+@media (max-width:480px)  
+	.search-container
+		width: 100%
+	.interested-section__row
+		& > .col-12  
+			&:nth-child(odd)
+				.interested-section__block
+					width: calc(var(--index)*13)
+					margin-right: auto
+			&:nth-child(even)
+				.interested-section__block
+					width: calc(var(--index)*13)
+					margin-left: auto
+	.interested-section__link
+		img
+			resize: both
+			width: calc(var(--index)*13)
+			height: calc(var(--index)*13) 
+
+		h5
+			font-size: calc(var(--index)*1.4)
+@media (max-width:347px) 
+	.comments-section__col
+		.reting 
+			margin-top: 10px
+			margin-bottom: 0
+		.comments-section__user
+			align-items: flex-start
+			flex-direction: column
