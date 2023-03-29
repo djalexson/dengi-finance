@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+// USER VARIABLES SECTION
+// line
+$color-devider:#EAEFFF;
+$color-devider-nav:#5277F7; 
+
+// btn
+$btn-1:linear-gradient(189deg,#35d5a5 2.1%,#00c7c5 32.94%,#2d9be0 57.62%,#5277f7 71.52%,#5b75f6 79.13%,#7370f4 91.42%,#836df3 98.23%);
+$btn-1-hover:linear-gradient(226deg,#35d5a5 2.1%,#00c7c5 32.94%,#2d9be0 57.62%,#5277f7 71.52%,#5b75f6 79.13%,#7370f4 91.42%,#836df3 98.23%);
+$bg-main-sec: linear-gradient(224.39deg, #35D5A5 2.1%, #00C7C5 32.94%, #2D9BE0 57.62%, #5277F7 71.52%, #5B75F6 79.13%, #7370F4 91.42%, #836DF3 98.23%);
+$color-head-main:#273B98;
+$accent: #273B98 ;// Accent Color
+$fontsize: 16px; // Body Font Size
+$lineheight: 1.65; // Document Line Height
+$textcolor: #819EC7; // Text Color
+$userfont: 'Open Sans', sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px;
+$gutter: $grid-gutter-widthL;
+$grid-breakpoints: ( 
+	xs: 0,
+	sm:200px,
+ md: 320px,
+ lg: 480px,
+ xl: 768px,
+ xxl: 1000px
+ );
+$container-max-widths: ( 
+	sm: 320px, 
+	md: 480px,
+	lg: 768px, 
+	xl: 1000px, 
+	xxl: 1164px 
+	);
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' ;// Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $Furl){
+	@font-face{
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($Furl) format('woff2');
+	}
+
+}
+
+@include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2');
+@include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2');
+@include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2');
+@include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2');
+
+// GENERAL CSS SETTINGS
+
+::placeholder{
+
+	color: #666;
+}
+
+::selection{
+
+	background-color: $accent;
+	color: #fff;
+}
+
+input, textarea{
+
+	outline: none;
+	&:focus:required:invalid{
+
+		border-color: red;
+	}
+	&:required:valid{
+
+		border-color: green;
+	}
+
+	
+}
+
+body{
+	font-family: $userfont;
+	font-size: $fontsize;
+	line-height: $lineheight;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}

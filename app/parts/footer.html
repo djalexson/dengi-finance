@@ -102,6 +102,42 @@ const swiper = new Swiper('.comments', {
   },
 	
 })
+
+var s = new Swiper('#slider1', {
+  slidesPerView:1 , // количество слайдов на экране
+  spaceBetween: 20, // расстояние между слайдами
+  direction: 'horizontal', // направление прокрутки
+  scrollbar: {
+    el: '.scrollbar', // селектор для полосы прокрутки
+    hide: false, // скрыть полосу прокрутки, если контент помещается на экране\
+		draggable:true,
+  }, 
+	breakpoints: {
+	 // whe window width is >= 320px
+	 320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    629: {
+			slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    1000: {
+			slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1140: {
+			slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1200: {
+			slidesPerView: 4,
+      spaceBetween: 20
+    }
+  }
+});
 </script>
 </body>
 </html>
